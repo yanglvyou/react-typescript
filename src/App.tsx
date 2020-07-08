@@ -1,12 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
+const App: React.FC = () => {
+  const a = "4";
+  if (a === "4") {
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <h1>111</h1>
+        <h2>222222221112</h2>
+        <hr />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -21,6 +24,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;
