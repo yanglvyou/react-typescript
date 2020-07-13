@@ -1,27 +1,23 @@
 import React from "react";
+import Button, { ButtonSize, ButtonType } from "./components/Button/button";
 
 const App: React.FC = () => {
-  const a = "4";
-  if (a === "4") {
-  }
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>111</h1>
-        <h2>222222221112</h2>
-        <hr />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button autoFocus className="app">Hello</Button>
+      <Button disabled>Disabled Button </Button>
+      <Button btnType={ButtonType.Primary} size={ButtonSize.Large} onClick={()=>{alert('1')}}>
+        Button PrimaryLarge
+      </Button>
+      <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
+        Button DangerSmall
+      </Button>
+      <Button btnType={ButtonType.Link} href="https://www.baidu.com">
+        Baidu Link
+      </Button>
+      <Button btnType={ButtonType.Link} disabled href="https://www.baidu.com">
+        Baidu Link
+      </Button>
     </div>
   );
 };
