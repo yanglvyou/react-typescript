@@ -1,23 +1,30 @@
 import React from "react";
 import Button, { ButtonSize, ButtonType } from "./components/Button/button";
+import Menu from "./components/Menu/menu";
+import MenuItem from "./components/Menu/menuItem";
+import SubMenu from "./components/Menu/subMenu";
 
 const App: React.FC = () => {
   return (
     <div className="App">
-      <Button autoFocus className="app">Hello</Button>
-      <Button disabled>Disabled Button </Button>
-      <Button btnType={ButtonType.Primary} size={ButtonSize.Large} onClick={()=>{alert('1')}}>
-        Button PrimaryLarge
-      </Button>
-      <Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
-        Button DangerSmall
-      </Button>
-      <Button btnType={ButtonType.Link} href="https://www.baidu.com">
-        Baidu Link
-      </Button>
-      <Button btnType={ButtonType.Link} disabled href="https://www.baidu.com">
-        Baidu Link
-      </Button>
+      <div>yang</div>
+      <Menu
+        defaultIndex={"0"}
+        mode="vertical"
+        defaultOpenSubMenus={["3"]}
+        onSelect={(index) => {
+          alert(index);
+        }}
+      >
+        <MenuItem>cool link</MenuItem>
+        <MenuItem disabled>cool link2 disabled</MenuItem>
+        <MenuItem>cool link3</MenuItem>
+        <SubMenu title="dropdown">
+          <MenuItem>dropdown 1</MenuItem>
+          <MenuItem>dropdown 2</MenuItem>
+          <MenuItem>dropdown 3</MenuItem>
+        </SubMenu>
+      </Menu>
     </div>
   );
 };
