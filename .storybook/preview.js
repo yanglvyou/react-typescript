@@ -7,21 +7,21 @@ import "../src/styles/index.scss"
 // add-info table style not working for now, I don't know the reason, so we have to manaul import it
 import "./fix_info_style.scss"
 
-// library.add(fas)
-// const wrapperStyle = {
-//   padding: '20px 40px',
-//   width: '500px'
-// }
+library.add(fas)
+const wrapperStyle = {
+  padding: '20px 40px',
+  width: '500px'
+}
 
-// const storyWrapper = (stroyFn) => (
-//   <div style={wrapperStyle}>
-//     <h3>组件演示</h3>
-//     {stroyFn()}
-//   </div>
-// )
-// addDecorator(storyWrapper)
-// addDecorator(withInfo)
-// addParameters({info: { inline: true, header: false}})
+const storyWrapper = (stroyFn) => (
+  <div style={wrapperStyle}>
+    <h3>组件演示</h3>
+    {stroyFn()}
+  </div>
+)
+addDecorator(storyWrapper)
+addDecorator(withInfo)
+addParameters({info: { inline: true, header: false}})
 // // const loaderFn = () => {
 // //   const allExports = [require('../src/welcome.stories.tsx')];
 // //   const req = require.context('../src/components', true, /\.stories\.tsx$/);
